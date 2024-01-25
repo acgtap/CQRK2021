@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>重庆市人文科技学院数学统计专业 回忆相册</title>
+    <meta name="keywords" content="梁平一中,毕业回忆,高2021级10班,纪念网站,高中毕业同学录,梁平" />
+    <meta name="description" content="留下属于我们的回忆~" />
+    <meta name="theme-color" content="#de698c" />
+
+    <style>
+        html {
+            font-family: 'ZCOOL KuaiLe', sans-serif;
+        }
+
+        body {
+            color: #343434;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            transition: all 1s;
+        }
+
+        .loading .logo {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 30px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .loading .logo img {
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 30px;
+        }
+
+        h1 {
+            margin-top: 15px;
+            font: 600 16px '';
+        }
+
+        .image {
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .card {
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #f9f9f9d8;
+        }
+
+        .card:hover {
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            background-color: #f9f9f9;
+        }
+
+        .conbody {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: url(https://2021-1252236879.cos.ap-chongqing.myqcloud.com/class%2Fbackground.png);
+            background-size: cover;
+            filter: blur(6px);
+        }
+
+        .toplogo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toplogo img {
+            max-width: 300px;
+        }
+
+        .content {
+            font-family: 'ZCOOL KuaiLe', sans-serif;
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+            margin-top: 20px;
+            margin: 10px auto;
+            line-height: 20px;
+            font-size: 14px;
+            max-width: 1170px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .btn {
+            margin: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-family: 'ZCOOL KuaiLe', sans-serif;
+        }
+
+        .music {
+            position: fixed;
+            left: 10px;
+            bottom: 5px;
+        }
+
+        .title {
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 2em;
+            max-width: 1170px;
+            padding-left: 20px;
+            font-family: 'ZCOOL KuaiLe', sans-serif;
+        }
+
+        .title h1 {
+            font-size: 2.6em;
+            letter-spacing: 0.1em;
+            color: #28b9be;
+            position: relative;
+            font-weight: 700;
+            line-height: 36px;
+            display: inline-block;
+            text-shadow: 0.1em 0.1em 0 var(--light);
+        }
+
+        .title p {
+            opacity: 0.3;
+            margin-left: 1em;
+            display: inline-block;
+        }
+
+        .vitem {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+        .highlight {
+            color: blue;
+        }
+
+        .video {
+            max-width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+
+            /*匹配界面宽度小于等于600px的设备*/
+            .card {
+                width: 70%;
+            }
+
+            .title p {
+                /* display: none; */
+            }
+
+            .title h1 {
+                font-size: 1.75em;
+            }
+
+            .vitem {
+                width: 100%;
+            }
+
+            .music {
+                position: relative;
+                margin-top: 20px;
+            }
+        }
+
+        @media (min-width: 600px) {
+
+            /*匹配界面宽度大于等于600px的设备*/
+            .card {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <div class="logo">
+            <img src="https://lh-1252236879.cos.ap-chongqing.myqcloud.com/%E6%9C%AA%E6%A0%87%E9%A2%98-4.png"
+                class="img-responsive" alt="Responsive image" />
+            <img src="https://linqin-1252236879.cos.ap-chengdu.myqcloud.com/res/loading.gif" />
+            <h3>稍等...加载中...<span class="load">0</span>%</h3>
+        </div>
+    </div>
+    <!-- 背景 -->
+    <div class="bg"></div>
+    <!-- 主要-->
+    <div>
+        <!-- 顶部 -->
+        <div class="toplogo">
+            <img src="https://lh-1252236879.cos.ap-chongqing.myqcloud.com/%E6%9C%AA%E6%A0%87%E9%A2%98-4.png"
+                class="img-responsive" alt="Responsive image" />
+        </div>
+        <div class="content">
+            <p>✨感谢到来！这里已经托管了64张照片！✨<br /></p>
+
+            <p>🎉主办：龙桦 <br /></p>
+            <p>
+                🎉此相册尊重并保护所有使用服务用户的<span class="highlight">个人隐私权</span>，如有疑问请与龙桦或邮箱 acgtracker@qq.com 联系。<br />
+            </p>
+            <p>此页面永久托管于腾讯云与Github！</p>
+        </div>
+        <div class="title">
+            <h1>📺 画廊</h1>
+            <p>定格下我们的生活！</p>
+        </div>
+        <!-- 照片 -->
+        <div class="conbody">
+            <div class="container"></div>
+        </div>
+        <!-- video -->
+        <div class="title">
+            <h1>📹 纪念视频</h1>
+            <p>仿佛回到从前！</p>
+        </div>
+        <div class="video" id="video">
+            <!-- 视频模板 -->
+            <!-- <div class="vitem">
+          <div id="dplayer"></div>
+        </div>
+        <div class="vitem">
+          <div id="dplayer2"></div>
+        </div> -->
+        </div>
+        <!-- 音乐 -->
+        <div class="footer">
+            我们已经毕业<span id="htmer_time"
+                style="color: green"></span>了<br />（即网页运营时间）<br />此页面永久托管于腾讯云与Github！<br />祝愿我们的未来前程似锦，一路繁花！<br />
+            <div id="music" class="music"></div>
+        </div>
+    </div>
+
+    <!-- 初始框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="font-family: 'ZCOOL KuaiLe', sans-serif">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">✨请先阅读隐私政策~</h4>
+                </div>
+                <div class="modal-body">
+                    <br />
+                    <p>
+                        ✨感谢到来，你又一次回到了这里！这里已经托管了<span class="highlight">64张</span>照片与<span
+                            class="highlight">2条</span>视频！✨<br />
+                    </p>
+
+                    <p>
+                        🎉主办：龙桦 <br />
+                    </p>
+                    <p>
+                        🎉此相册尊重并保护所有使用服务用户的<span class="highlight">个人隐私权</span>，如有疑问请与龙桦或邮箱 acgtracker@qq.com 联系。<br />
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        好的
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- 引入jQuery库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- 引入jQuery UI库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/dplayer/1.27.1/DPlayer.min.js"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css"
+    integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous" />
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+<!-- 这个音乐播放器不支持https
+    <script
+    id="ilt"
+    src="http://musicp.lingyuyy.com/player/js/player.js"
+    key="ba96859089e94ea6951ad09c072a600c"
+  ></script> -->
+<script>
+    // 获取.container元素
+    const target = document.querySelector('.container')
+    const target_video = document.querySelector('.video')
+    //全局加载进度
+    var loading = 0
+    // 设置图片数量为99
+    var imageCount = 99
+    // 存储已使用的图片名称
+    var usedImages = []
+    // 从指定URL获取图片数据
+    //加载一些配置
+    console.log('loading config...')
+    fetch('./config.json')
+        .then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            console.log('loading config success and load images!')
+            $('.load').html('10')
+            var datacopy = []
+            var data_img = data['images']
+            //var length = JSONLength(data)
+            var length = data['images'].length
+            //console.log(data)
+            imageCount = length
+            // 循环生成指定数量的图片卡片
+            for (i = 0; i < imageCount; i++) {
+                // 生成图片卡片
+                //var randNum = getRandomImageIndex();
+                //console.log(i)
+                //console.log(data[i])
+                var s1 = {
+                    url: data_img[i],
+                    time: data_img[i]
+                }
+                createImage(data, s1)
+                // 随机散布卡片
+                scatterCards()
+            }
+            // 逐个显示卡片
+            show(0)
+            console.log('loading video...')
+            $('.load').html('30')
+            //初始化视频
+            for (i = 0; i < data['videos'].length; i++) {
+                createVideo(data['videos'][i], i)
+            }
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    //创建视频
+    function createVideo(data, i) {
+        console.log(data, i)
+        i++
+        $('#video').append('<div class="vitem" id="dplayer' + i + '"></div>')
+
+        new DPlayer({
+            container: document.getElementById('dplayer' + i),
+            screenshot: true,
+            video: {
+                url: data
+                // pic: 'demo.jpg',
+                // thumbnails: 'thumbnails.jpg'
+            }
+            // subtitle: {
+            //   // url: 'webvtt.vtt'
+            // },
+            // danmaku: {
+            //   id: 'demo',
+            //   api: 'https://api.prprpr.me/dplayer/'
+            // }
+        })
+    }
+    // 根据图片数据和随机数生成图片卡片
+    function createImage(data, s1) {
+        //console.log(s1.url)
+        target.innerHTML += `<div class="card">
+<img src="${s1.url}/out2" class="image">
+</div>`
+        //<div class="color-codes"><h1>${padNumber(randNum)}</h1></div>
+    }
+    function JSONLength(obj) {
+        var size = 0,
+            key
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) size++
+        }
+        return size
+    }
+    // 将数字转换为两位数格式（例如：1 -> 01）
+    function padNumber(number) {
+        return number.toString().padStart(2, '0')
+    }
+
+    // 逐个显示卡片
+    function show(i) {
+        var cards = document.querySelectorAll('.card')
+        if (i < imageCount) {
+            setTimeout(function () {
+                cards[i].classList.add('active')
+                i++
+                show(i)
+            }, 100)
+        }
+    }
+
+    // 随机散布卡片
+    function scatterCards() {
+        $('.card')
+            .each(function () {
+                // 随机旋转角度
+                var rNum = Math.random() * 50 - 2
+                rNum *= Math.floor(Math.random() * 2) == 1 ? 1 : -1
+                // 随机位置偏移量
+                var x = Math.random() * 50 - 5
+                var y = Math.random() * 50 - 5
+                x *= Math.floor(Math.random() * 2) == 1 ? 1 : -1
+                y *= Math.floor(Math.random() * 2) == 1 ? 1 : -1
+
+                // 设置卡片的旋转角度和位置
+                $(this).css({
+                    '-webkit-transform': 'rotate(' + rNum + '2deg)',
+                    '-moz-transform': 'rotate(' + rNum + '2deg)',
+                    top: x,
+                    left: y,
+                    height: 'fit-content'
+                })
+            })
+            // 设置卡片可拖动，并形成堆叠效果
+            .draggable({
+                stack: '.card',
+                stop: function (event, ui) {
+                    // 获取鼠标甩开时的位置
+                    var originalPosition = ui.originalPosition
+                    // 获取当前卡片的位置
+                    var currentPosition = ui.position
+                    // 计算位置的差值
+                    var diffX = currentPosition.left - originalPosition.left
+                    var diffY = currentPosition.top - originalPosition.top
+
+                    // 动画效果，让卡片飘动一段距离，方向与鼠标甩开的方向一致
+                    $(this).animate(
+                        {
+                            top: '+=' + diffY + 'px',
+                            left: '+=' + diffX + 'px'
+                        },
+                        300
+                    )
+                }
+            })
+    }
+
+    //time
+    function secondToDate(second) {
+        if (!second) {
+            return 0
+        }
+        var time = new Array(0, 0, 0, 0, 0)
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600))
+            second %= 365 * 24 * 3600
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600))
+            second %= 24 * 3600
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600)
+            second %= 3600
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60)
+            second %= 60
+        }
+        if (second > 0) {
+            time[4] = second
+        }
+        return time
+    }
+</script>
+<script type="text/javascript" language="javascript">
+    console.log('loading timer...')
+    $('.load').html('40')
+    function setTime() {
+        var create_time = Math.round(
+            new Date(Date.UTC(2021, 06, 10, 0, 0, 0)).getTime() / 1000
+        )
+        var timestamp = Math.round(
+            (new Date().getTime() + 8 * 60 * 60 * 1000) / 1000
+        )
+        currentTime = secondToDate(timestamp - create_time)
+        currentTimeHtml =
+            currentTime[0] +
+            '年' +
+            currentTime[1] +
+            '天' +
+            currentTime[2] +
+            '时' +
+            currentTime[3] +
+            '分' +
+            currentTime[4] +
+            '秒'
+        document.getElementById('htmer_time').innerHTML = currentTimeHtml
+    }
+    setInterval(setTime, 1000)
+</script>
+<!-- 音乐播放器 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/cplayer/3.2.1/cplayer.js"></script>
+<script>
+    $('.load').html('60')
+    console.log('loading music...')
+    //随机歌曲
+    function randSort1(arr) {
+        for (var i = 0, len = arr.length; i < len; i++) {
+            var rand = parseInt(Math.random() * len)
+            var temp = arr[rand]
+            arr[rand] = arr[i]
+            arr[i] = temp
+        }
+        return arr
+    }
+
+    var music = [
+        {
+            src: 'https://linqin-1252236879.cos.ap-chengdu.myqcloud.com/res/0e09_520e_0558_9cff629e5eedf71e4339221bc586dc69.m4a',
+            poster:
+                'https://p2.music.126.net/cpoUinrExafBHL5Nv5iDHQ==/109951166361218466.jpg?param=130y130',
+            name: '山高水长 (重录版)',
+            artist: '中山大学',
+            lyric: `[00:00.00] 作词 : 陈小奇
+[00:00.76] 作曲 : 陈小奇
+[00:01.52] 编曲 : 关键
+[00:02.28] 重新编曲：郑理
+[00:03.05]编曲：关键
+[00:04.05]重新编曲：郑理
+[00:08.05]你是一个动人的故事讲了许多年
+[00:16.77]风里的钟楼 火里的凤凰
+[00:21.10]激扬文字的昨天
+[00:25.43]你是一支美丽的歌谣唱了许多遍
+[00:33.83]灯下的背影 清晨的书声
+[00:38.05]青春不老的容颜
+[00:44.18]你是一个动人的故事讲了许多年
+[00:52.14]风里的钟楼 火里的凤凰
+[00:56.06]激扬文字的昨天
+[00:59.86]你是一支美丽的歌谣唱了许多遍
+[01:07.80]灯下的背影 清晨的书声
+[01:11.69]青春不老的容颜
+[01:15.61]山高水长 根深叶茂
+[01:23.46]上下求索 海纳百川
+[01:31.37]悠悠寸草心怎样报得三春暖
+[01:39.12]千百个梦里总把校园当家园
+[01:48.87]你是一座高高的山峰矗立在南天
+[01:56.68]肩上的道义 笔下的风采
+[02:00.59]筑成民族的尊严
+[02:04.56]你是一条长长的大江延伸到天边
+[02:11.97]甘甜的乳汁 芬芳的桃李
+[02:15.58]连结四海的眷恋
+[02:19.68]山高水长 根深叶茂
+[02:27.48]上下求索 海纳百川
+[02:35.54]悠悠寸草心怎样报得三春暖
+[02:43.35]千百个梦里总把校园当家园
+[02:55.57]你是一座高高的山峰矗立在南天
+[03:04.38]肩上的道义 笔下的风采
+[03:08.50]筑成民族的尊严
+[03:12.75]你是一条长长的大江延伸到天边
+[03:21.07]甘甜的乳汁 芬芳的桃李
+[03:25.41]连结四海的眷恋
+[03:29.15]连结四海的眷恋
+`,
+            sublyric: ''
+        },
+        {
+            src: 'https://linqin-1252236879.cos.ap-chengdu.myqcloud.com/res/obj_w5rDlsOJwrLDjj7CmsOj_19959179206_d5fc_1cda_3313_7e0a6142b137898daf676c4f38a4ef63.m4a',
+            poster:
+                '	https://p1.music.126.net/YIOIRzG61GKLTFRqcAQzMA==/109951167934620593.jpg?param=130y130',
+            name: '这世界有那么多人',
+            artist: '中国人民大学合唱团',
+            lyric: `
+          [00:00.00] 作词 : 中国人民大学合唱团
+[00:00.00] 作曲 : 中国人民大学合唱团
+[00:00.00] 编曲 : 中国人民大学合唱团
+[00:00.00]作词：王海涛
+[00:05.41]作曲：彭飞
+[00:09.92]钢琴伴奏：黄安雯
+[00:17.15]这 世界有 那么多人
+[00:23.56]人群里  敞着一扇 门
+[00:30.51]我 迷朦 的眼睛里 长存
+[00:36.38]初见你 蓝色 清晨
+[00:43.20]这世界有 那么多人
+[00:49.32]多 幸运  我 有个我们
+[00:56.08]这悠长 命运中的 晨 昏
+[01:02.03]常让我  望 远方 出神
+[01:09.34]灰 树叶 飘转 在 池塘
+[01:15.60]看 飞机轰的 一 声去远乡
+[01:21.18]光 阴的 长廊 脚步声 叫嚷
+[01:27.45]灯 一亮  无人的空 荡
+[01:34.38]晚 风中闪过  几帧从前 啊
+[01:40.71]飞 驰中旋转  已不见了吗
+[01:46.96]远光中走来  你一 身晴 朗
+[01:53.67]身旁 那么多人  可世界不声  不响
+[02:05.40]这世界 有 那么多人
+[02:11.28]多幸运  我 有 个 我 们
+[02:17.73]这悠长 命运中 的 晨昏
+[02:23.43]常让我  望 远方出神
+[02:30.44]灰树叶飘转 在 池塘
+[02:36.57]看 飞机轰的一 声去远乡
+[02:41.49]光阴的 长廊 脚步声叫嚷
+[02:48.30]灯 一亮 无人的空荡
+[02:55.35]晚风中 闪 过 几帧从前 啊
+[03:01.71]飞驰中旋转  已不见了吗
+[03:07.92]远光 中走来  你一身晴朗
+[03:14.77]身旁 那么多人  可世界不声  不响
+[03:23.60]笑声 中浮过  几张旧模样
+[03:29.91]留 在梦田里 永远不散场
+[03:36.05]暖光中 醒来  好多话要 讲
+[03:42.88]世界 那么多人  可是它不声  不 响
+[03:55.25]这世界有那么个人
+[04:01.84]活在 我  飞扬 的青春
+[04:09.42]在泪水里 浸湿 过的 长吻
+[04:17.24]常让我  想 啊想 出神
+`
+        }
+    ]
+    var musics = randSort1(music)
+    let player = new cplayer({
+        element: document.getElementById('music'),
+        playlist: musics
+    })
+</script>
+<script>
+    $('.load').html('80')
+    //监听加载状态改变
+    window.onload = completeLoading
+
+    //加载状态为complete时移除loading效果
+    function completeLoading() {
+        console.log(document.readyState)
+        console.log('loading complete!')
+        //$('#loading').css('opacity', '0')
+        $('#loading').fadeOut(1000)
+        setTimeout(function () {
+            $('#myModal').modal('show')
+            $('#myModal').on('hidden.bs.modal', function (e) {
+                // do something...
+                console.log('play music...')
+                player.play()
+            })
+        }, 1000)
+    }
+</script>
+<!-- 字体库 -->
+<style>
+    /* zcool-kuaile-regular */
+    @font-face {
+        font-family: 'ZCOOL KuaiLe';
+        font-style: normal;
+        font-weight: regular;
+        src: url('//lib.baomitu.com/fonts/zcool-kuaile/zcool-kuaile-regular.eot');
+        /* IE9 Compat Modes */
+        src: local('ZCOOL KuaiLe'), local('ZCOOLKuaiLe-Normal'),
+            url('//lib.baomitu.com/fonts/zcool-kuaile/zcool-kuaile-regular.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('//lib.baomitu.com/fonts/zcool-kuaile/zcool-kuaile-regular.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('//lib.baomitu.com/fonts/zcool-kuaile/zcool-kuaile-regular.woff') format('woff'),
+            /* Modern Browsers */
+            url('//lib.baomitu.com/fonts/zcool-kuaile/zcool-kuaile-regular.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('//lib.baomitu.com/fonts/zcool-kuaile/zcool-kuaile-regular.svg#ZCOOLKuaiLe') format('svg');
+        /* Legacy iOS */
+    }
+</style>
+
+</html>
